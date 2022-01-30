@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 5em;
+}
+.container {
+    width: 50vw;
+    position: relative;
+    border-bottom: 2px dashed gray;
+}
+.tabsRadio {
+    position: absolute;
+    top: -6vh;
+    width: 50vw;
+    height: 6vh;
+    background: darkgray;
+    padding: 1em;
+}
+input[type="radio"] {
+    appearance: none;
+}
+.radio {
+    display: inline-block;
+    line-height: 30px;
+    width: 100px;
+    text-align: center;
+    background-color:darkgray;
+    color: white;
+    box-shadow: 1px 1px 3px black;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+input[type="radio"]:checked + .radio {
+    background-color:dodgerblue;
+    box-shadow: inset 1px 1px 3px black;
+}
+.view {
+    padding: 1em;
+    opacity: 1;
+    animation-name: open;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+}
+.view-hide {
+    display: none;
+}
+.view__header {
+    line-height: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.view__text {
+    line-height: 1.5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+}
+
+@keyframes open {
+    0% {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
